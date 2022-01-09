@@ -1,38 +1,3 @@
-// {
-//     item: '',
-//     brand '',
-//     units: '',
-//     quantity: 0,
-//     isPurchased: false
-//   }
-//1. Make an array of 3 objects using the above shape and render the item, quantity and units (12 pack, 1lb, 2 liters, etc.)
-
-const groceryList = [
-    {
-        item: "Strawberries",
-        brand: "Del Monte",
-        units: "3 lbs",
-        quantity: 40,
-        isPurchased: false,
-    },
-    {
-        item: "Japanese sweet potatoes",
-        brand: "The Potato Company",
-        units: "10 lbs",
-        quantity: 10,
-        isPurchased: false,
-    },
-    {
-        item: "Black bean patties",
-        brand: "Morning Star",
-        units: "1 lb",
-        quantity: 8,
-        isPurchased: false,
-    },
-]
-console.table(groceryList)
-
-
 class App extends React.Component {
     state = {
         grocery: groceryList,
@@ -74,8 +39,10 @@ class App extends React.Component {
             <div>
                 <h1> Grocery List</h1>
 
-                <h2> Insert</h2>
-                {/* 2. Make inputs so that new items can be added */}
+                <h2> Insert Items to Add to Your Grocery List</h2>
+
+{/* 2. Make inputs so that new items can be added */}
+
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="item"> Item: </label>
                     <input id="item" type="text" value={this.state.item} onChange={this.handleChange} />
@@ -87,7 +54,7 @@ class App extends React.Component {
                     <input id="quantity" type="text" value={this.state.quantity} onChange={this.handleChange} />
                 </form>
 
-                <div>
+                <div className="newItems">
                     <h2>These Items Have Been Added to Your Grocery List</h2>
                     <h3>{this.state.item}</h3>
                     <h4>{this.state.brand}</h4>
@@ -95,15 +62,12 @@ class App extends React.Component {
                     <h5>{this.state.quantity}</h5>
                 </div>
                 {/* 3. Conditionally render the grocery items based on whether or not they were purchased (ok to have hard coded values for isPurchased) */}
-                <ul>
-                    {
-                        this.state.grocery.map(purchased =>{
+          
+                        if(this.state.isPurchased === "true")
                             return(
-                                <li>{purchased.item}{purchased.isPurchased}</li>
+
                             )
-                        })
-                    }
-                </ul>
+
 
             </div>
         )
@@ -114,3 +78,13 @@ ReactDOM.render(
     <App />,
     document.querySelector('#container')
 )
+
+                {/* <ul>
+                    {
+                        this.state.grocery.map(purchased =>{
+                            return(
+                                <li>{purchased.item} {purchased.brand}{purchased.isPurchased}</li>
+                            )
+                        })
+                    }
+                </ul>
