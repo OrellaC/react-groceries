@@ -39,7 +39,7 @@ class App extends React.Component {
             <div>
                 <h1> Grocery List</h1>
 
-                <h2> Insert Items to Add to Your Grocery List</h2>
+                <h2> Add Items to Your Grocery List</h2>
 
                 {/* 2. Make inputs so that new items can be added */}
 
@@ -52,10 +52,11 @@ class App extends React.Component {
                     <input id="units" type="text" value={this.state.units} onChange={this.handleChange} />
                     <label htmlFor="quantity"> Quantity: </label>
                     <input id="quantity" type="text" value={this.state.quantity} onChange={this.handleChange} />
+        
                 </form>
 
                 <div className="newItems">
-                    <h2>These Items Have Been Added to Your Grocery List</h2>
+                    <h2>These Items Have Been Added to Your Grocery List</h2> 
                     <h3>{this.state.item}</h3>
                     <h4>{this.state.brand}</h4>
                     <h5>{this.state.units}</h5>
@@ -63,7 +64,8 @@ class App extends React.Component {
                 </div>
                 {/* 3. Conditionally render the grocery items based on whether or not they were purchased (ok to have hard coded values for isPurchased) */}
                 {/* This is how you create an if else statement in react.js */}
-                <h2> This Items Have Been Purchased</h2>
+
+                <h2> These Items Have Been Purchased</h2>
                 <ul>
                     {
                         this.state.grocery.map(purchased => {
