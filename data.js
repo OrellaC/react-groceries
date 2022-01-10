@@ -13,7 +13,7 @@ const groceryList = [
         brand: "Del Monte",
         units: "3 lbs",
         quantity: 40,
-        isPurchased: false,
+        isPurchased: true,
     },
     {
         item: "Japanese sweet potatoes",

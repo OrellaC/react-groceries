@@ -23,7 +23,7 @@ class App extends React.Component {
             quantity: this.state.isPurchased
         }
         console.log(newListItem)
-       
+
         // Correct way of updating
         // event.target.id allows us to use the id we specified in the form to make our handleChange dynamic
         this.setState({
@@ -41,7 +41,7 @@ class App extends React.Component {
 
                 <h2> Insert Items to Add to Your Grocery List</h2>
 
-{/* 2. Make inputs so that new items can be added */}
+                {/* 2. Make inputs so that new items can be added */}
 
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="item"> Item: </label>
@@ -62,15 +62,19 @@ class App extends React.Component {
                     <h5>{this.state.quantity}</h5>
                 </div>
                 {/* 3. Conditionally render the grocery items based on whether or not they were purchased (ok to have hard coded values for isPurchased) */}
-  
-               <ul>
+                {/* This is how you create an if else statement in react.js */}
+                <h2> This Items Have Been Purchased</h2>
+                <ul>
                     {
-                        this.state.grocery.map(purchased =>{
-                            return(
-                                <li>{purchased.item} {purchased.brand}{purchased.isPurchased}</li>
-                            )
-                        })
-                    }
+                        this.state.grocery.map(purchased => {
+                            if (purchased.isPurchased === true){
+                                return(
+                                    <p>{purchased.item} </p>
+                                )
+                            }
+
+                            })
+                        }
                 </ul>
 
             </div>
@@ -83,13 +87,4 @@ ReactDOM.render(
     document.querySelector('#container')
 )
 
-//render(){
-    // let isPurchased = true;
-    // if(isPurchased === true){
-    //     return(`${units} units of ${item} have been purchased`);
-    //    } else {
-    //        return(`${units} units of ${item} have not been purchased`);
 
-    //    }
-
-// Stretch Add a button that says 'remove' and when clicked the value of isPurchased is toggled
