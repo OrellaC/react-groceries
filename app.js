@@ -83,7 +83,7 @@ ReactDOM.render(
     document.querySelector('#container')
 )
 
-
+//render(){
     // let isPurchased = true;
     // if(isPurchased === true){
     //     return(`${units} units of ${item} have been purchased`);
@@ -91,3 +91,5 @@ ReactDOM.render(
     //        return(`${units} units of ${item} have not been purchased`);
 
     //    }
+
+// Stretch Add a button that says 'remove' and when clicked the value of isPurchased is toggled
