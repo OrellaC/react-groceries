@@ -84,7 +84,7 @@ ReactDOM.render(
 )
 
 
-    // let itemPurchased = true;
+    // let isPurchased = true;
     // if(isPurchased === true){
     //     return(`${units} units of ${item} have been purchased`);
     //    } else {
