@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700%7CThasadith');
+*{
+    width: 100%;
+    
+
+  
+}
+body {
+font-family: 'Thasadith', sans-serif;
+margin: 0;
+background: var
+
+}
+
+
+h1 {
+font-family: 'Poppins', sans-serif;
+text-align: center;
+background: lightblue;
+color: yellow;
+margin-top: 0;
+padding: 1em;
+width: 100%;
+
+}
+
+
+h2 {
+transition-duration: 2s;
+text-align: center;
+width: 100%;
+margin-top: 0;
+
+}
+
+
+form {
+box-sizing: border-box;
+flex-basis: 46%;
+vertical-align: top;
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+justify-content: center;
+margin-right: 0;
+
+}
+
+ul {
+padding: 0;
+}
+
+
+label {
+flex-basis: 20%;
+}
+
+
+input[type="text"], textarea, input[type="number"] {
+flex-basis: 68%;
+margin: .2em;
+}
+
+
+input[type="submit"] {
+flex-basis: 38%;
+margin: 2em;
+align-self: center;
+padding: .5em;
+font-family: 'Poppins', sans-serif;
+
+}
+
+
+div {
+display: inline-block;
+box-sizing: border-box;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: ;
+
+}
+
+
+.container {
+width : 100%;
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.container > div {
+
+width : 100%;
+
+display: flex;
+
+flex-wrap: wrap;
+
+justify-content: space-between;
+
+}
+
+
+li {
+list-style: none;
+padding: .3em;
+text-align: center;
+color: red;
+background-color: wheat;
+
+}

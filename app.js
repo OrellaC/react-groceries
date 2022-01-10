@@ -62,12 +62,16 @@ class App extends React.Component {
                     <h5>{this.state.quantity}</h5>
                 </div>
                 {/* 3. Conditionally render the grocery items based on whether or not they were purchased (ok to have hard coded values for isPurchased) */}
-          
-                        if(this.state.isPurchased === "true")
+  
+               <ul>
+                    {
+                        this.state.grocery.map(purchased =>{
                             return(
-
+                                <li>{purchased.item} {purchased.brand}{purchased.isPurchased}</li>
                             )
-
+                        })
+                    }
+                </ul>
 
             </div>
         )
@@ -79,12 +83,11 @@ ReactDOM.render(
     document.querySelector('#container')
 )
 
-                {/* <ul>
-                    {
-                        this.state.grocery.map(purchased =>{
-                            return(
-                                <li>{purchased.item} {purchased.brand}{purchased.isPurchased}</li>
-                            )
-                        })
-                    }
-                </ul>
+
+    // let itemPurchased = true;
+    // if(isPurchased === true){
+    //     return(`${units} units of ${item} have been purchased`);
+    //    } else {
+    //        return(`${units} units of ${item} have not been purchased`);
+
+    //    }
